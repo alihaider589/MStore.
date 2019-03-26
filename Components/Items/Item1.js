@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View,ImageBackground, Dimensions } from 'react-native'
-import {Content,List,ListItem,Left,Thumbnail,Body,Right, Container,Tabs,Header,Tab,TabHeading,Icon,Card,CardItem,Button,Footer,FooterTab} from 'native-base'
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import {Content,List,ListItem,Left,Thumbnail,Body,Right, ScrollView, TouchableOpacity ,Container,Tabs,Header,Tab,TabHeading,Icon,Card,CardItem,Button,Footer,FooterTab} from 'native-base'
 import AutoHeightImage from 'react-native-auto-height-image'
 import Modal from 'react-native-modal'
 import Shirt from '../Images/shirt.jpg'

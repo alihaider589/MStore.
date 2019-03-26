@@ -303,7 +303,7 @@ export default class TwoColumnEn extends Component {
             <Button onPress={() => this.props.navigation.navigate('Home')}>
               <Icon name="home" style={{color:"#42C2BF"}} />
             </Button>
-            <Button onPress={() => this.props.navigation.navigate('Categories')}>
+            <Button onPress={() => this.props.navigation.navigate('Category')}>
               <Icon name="th-large" type="FontAwesome" style={{color:"gainsboro"}}/>
             </Button>
             <Button onPress={() => this.props.navigation.navigate('Search')}>
