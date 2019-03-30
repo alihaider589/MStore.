@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Text, View,ImageBackground, Dimensions } from 'react-native'
-import {Content,List,ListItem,Left,Thumbnail,Body,Right, ScrollView, TouchableOpacity ,Container,Tabs,Header,Tab,TabHeading,Icon,Card,CardItem,Button,Footer,FooterTab} from 'native-base'
+import {Content,List,ListItem,Left,Thumbnail,Body,Right, Container,Tabs,Header,Tab,TabHeading,Icon,Card,CardItem,Button,Footer,FooterTab} from 'native-base'
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import AutoHeightImage from 'react-native-auto-height-image'
 import Modal from 'react-native-modal'
-import Shirt from '../Images/shirt.jpg'
 import I18n from 'react-native-i18n'
 import EN from '../I18N/EN'
 import AR from '../I18N/AR'
@@ -11,10 +11,25 @@ import AR from '../I18N/AR'
 
 
 export default class Item1 extends Component {
+  HeartColor = () =>{
+    if(this.state.HeartColor == "grey")
+    {
+      this.setState({
+        HeartColor:"red"
+      })
+    }
+    else{
+      this.setState({
+        HeartColor:"grey"
+      })
+    }
+  }
+
   static navigationOptions={
     drawerLabel:()=>null
   }
 state={
+  HeartColor:"grey",
   isModalVisible:false,
   ImageHeight:"100%"
 
@@ -105,38 +120,25 @@ Accellarate X7 PRO media
 
 </View>
 </ScrollView>
-<View style={{backgroundColor:'white',flexDirection:'row'}}>
-
-<TouchableOpacity>
- 
-<Icon name='share' type="MaterialIcons"  style={{height:30,width:30,marginTop:5,marginLeft:10}}/>
-</TouchableOpacity>
-<TouchableOpacity>
-
-<Icon name='favorite-border' type="MaterialIcons"  style={{height:30,width:30,marginTop:5,marginLeft:15}}/>
-
-</TouchableOpacity>
-<TouchableOpacity
->
-<Icon name='shopping-cart' type="MaterialIcons"  style={{height:30,width:30,marginTop:5,marginLeft:15}}/>
-
-<Text 
-onPress={()=>this.props.navigation.navigate('Cart')}
->hello</Text>
-
-</TouchableOpacity>
-<TouchableOpacity
-style={{width:220,height:34,marginLeft:15,backgroundColor:'rgb(0, 122, 204)',justifyContent: 'center',alignItems:'center'}}>
-<Text style={{color:'white',marginTop:5,fontWeight:'bold'}} 
-onPress={()=>alert('hello')}
-
-> 
-  BUY NOW
-</Text>
-
-</TouchableOpacity>
-</View>
-<View>
+<View style={{width:"100%",flexDirection:"row",height:40}}>
+                    <View style={{width:"50%",height:40,flexDirection:"row",alignItems:"center"}}>
+                        <View style={{flexGrow:1,alignItems:"center"}}>
+                            <Icon name="share-alt" type="FontAwesome" style={{fontSize:20,color:"grey"}} />
+                        </View>
+                        <View style={{flexGrow:1,alignItems:"center"}}>
+                            <Icon name="favorite-border" type="MaterialIcons" onPress={this.HeartColor} style={{fontSize:20,color:this.state.HeartColor}}/>
+                        </View>
+                        <View style={{flexGrow:1,alignItems:"center"}}>
+                            <Icon name="cart" style={{fontSize:20,color:"grey"}}
+                            onPress={()=>this.props.navigation.navigate("Cart")}
+                            />
+                        </View>
+                    </View>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Login')} activeOpacity={0.7} style={{width:150,backgroundColor:"#42C2BF",height:40,justifyContent: 'center',alignItems: 'center',}}>
+                        <Text style={{color:"white",fontWeight:"bold"}}>BUY NOW</Text>
+                    </TouchableOpacity>
+                </View>
+                <View>
 <Footer>
   <FooterTab style={{backgroundColor: "white",}}>
     <Button onPress={() => this.props.navigation.navigate('Home')}>

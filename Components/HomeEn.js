@@ -625,7 +625,7 @@ onPress={()=>this.props.navigation.navigate('Item',{Picture:'https://asset.msi.c
                 onPress={()=>this.props.navigation.navigate('ListView')}>
                   
                 <Text style={{justifyContent:"center"}}>
-                <Text style={{fontSize:15,color:"black",color:'rgb(0, 122, 204)'}}>{I18n.t("Show_All")} ></Text>
+                <Text style={{fontSize:15,color:"black",color:'rgb(0, 122, 204)'}}>{I18n.t("Show_All")} </Text>
                 </Text>
                 </TouchableOpacity>
               </View>
@@ -1081,7 +1081,7 @@ onPress={()=>this.props.navigation.navigate('Item',{Picture:'https://8fddbd524b5
               > 
 
                 <Text style={{justifyContent:"center"}}>
-                <Text style={{fontSize:15,color:"black",color:'rgb(0, 122, 204)'}}>{I18n.t("Show_All")} ></Text>
+                <Text style={{fontSize:15,color:"black",color:'rgb(0, 122, 204)'}}>{I18n.t("Show_All")} </Text>
                 </Text>
               </TouchableOpacity>
               </View>
@@ -1325,7 +1325,7 @@ onPress={()=>this.props.navigation.navigate('Item',{Picture:'https://images.home
               onPress={()=>this.props.navigation.navigate('ListView')}
               >
                 <Text style={{justifyContent:"center"}}>
-                <Text style={{fontSize:15,color:"black",color:'rgb(0, 122, 204)'}}>{I18n.t("Show_All")}></Text>
+                <Text style={{fontSize:15,color:"black",color:'rgb(0, 122, 204)'}}>{I18n.t("Show_All")}</Text>
                 </Text>
               </TouchableOpacity>
               </View>

@@ -94,7 +94,6 @@ export default class Cart extends Component {
              <TouchableOpacity>
                 <View style={{flexDirection:'row',backgroundColor:"white",width:40,height:40,borderRadius:50,alignItems: 'center',justifyContent: 'center',borderWidth:0.7,borderColor:"silver"}}>
                     <View style={{backgroundColor:"silver",width:30,height:30,borderRadius:50,alignItems: 'center',justifyContent: 'center',borderWidth:2,borderColor:"silver",}}>
-                       <Icon name="Dollar-sign" type="FontAwesome" style={{fontSize: 15,color:"white"}} />
                     </View>  
                 </View> 
              </TouchableOpacity>
