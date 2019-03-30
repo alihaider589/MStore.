@@ -90,7 +90,7 @@ export default class AccountComponentEn extends Component {
             style={{width:"100%",alignItems:"center",marginTop:10, height:60,borderBottomWidth: 0.7,borderColor: "silver",backgroundColor: "white",}}>
               <View style={{width:"90%",height:60,justifyContent: 'center',flexDirection: 'row'}}>
                 <View style={{flexGrow:1,alignItems:"flex-start",justifyContent: 'center'}}>
-                  <Text style={{fontSize:17}}>Cart ({this.state.Wishlist})</Text>
+                  <Text style={{fontSize:17}}>{I18n.t("Cart")} ({this.state.Wishlist})</Text>
                 </View>
                 <View style={{flexGrow:1,alignItems:"flex-end",justifyContent: 'center',}}>
                   <Icon name="keyboard-arrow-right" type="MaterialIcons" style={{fontSize: 20,}} />
